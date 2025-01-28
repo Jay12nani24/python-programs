@@ -1,19 +1,18 @@
-# Accept user input as an integer
+# Ask the user to enter a number
 n = int(input("Enter a number: "))
 
-# Check if the input number is less than or equal to 1
+# Check if the number is less than or equal to 1
 if n <= 1:
-    # Numbers less than or equal to 1 are not prime
+    # If the number is 1 or less, it's not a prime number
     print("Not prime")
 else:
-    # Loop through all numbers from 2 up to (but not including) n
+    # Check all numbers starting from 2 up to (but not including) n
     for i in range(2, n):
-        # Check if n is divisible by i (i.e., remainder is 0)
+        # If n is divisible by any number in this range
         if n % i == 0:
-            # If divisible, n is not a prime number
+            # It's not a prime number
             print(n, "is not prime")
-            break  # Exit the loop since we've found a divisor
+            break  # Stop checking further
     else:
-        # The 'else' block of the loop is executed if the loop is not broken
-        # If no divisors are found, the number is prime
+        # If no divisors are found, it's a prime number
         print(n, "is prime")
